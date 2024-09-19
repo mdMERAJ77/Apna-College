@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        //Arrays method
+        /*
+        note:- array are mutable
+        push,pop :-by default push or pop last
+        unshift,shift :-start
+        includes,indexOf
+        reverse,concat  
+        slice
+        
+        */
+        //array Reference
+        let arr = ['a', 'b'];
+        let arrCopy = ['a', 'b'];
+        arrCopy.push('c');
+        console.log(arr) //['a','b','c']
+        arr == arrCopy //true
+
+        let students = ['meraj', 'seraj', 'sakib', 'sarik', 'hamza', 'sadik'];
+        students[1];
+
+        let emptyArray = [];
+
+        //use of push pop and unshift shift
+        let follower = ['a', 'b', 'c'];
+        let blocked = follower.shift();
+
+
+        //Nested array
+        let num = [
+            [1, 2],
+            [3, 4],
+            [4, 5]
+        ];
+        console.log(num);
+
+        let ticToe = [
+            ['x', null, '0'],
+            [null, 'x', null],
+            ['0', null, 'x']
+        ];
+        console.log(ticToe);
+    </script>
+</body>
+
+</html>

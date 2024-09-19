@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Write a JavaScript program to check whether a string is blank or not.
+
+        function isEmpty(str) {
+            return str.trim().length === 0;
+        }
+        console.log(isEmpty('')); //true
+        console.log(isEmpty(' ')); //true
+        console.log(isEmpty('m')); //false
+        console.log(isEmpty('meraj')); //false
+
+
+        console.log('\n')
+            //Write a JavaScript program to test whether the character at the given (character) index is lower case.
+        function checkLowerCase(str1) {
+            if (str1 === str1.toLowerCase() && str1 !== str1.toUpperCase()) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+        console.log(checkLowerCase('meraj')); //true
+        console.log(checkLowerCase("MERAJ")); //false
+        console.log(checkLowerCase('134fuouf')); //false
+
+        //How to check valid number
+        /*let userInput = prompt('enter a number');
+
+        if (!isNaN(userInput)) {
+            let number = parseFloat(userInput);
+            console.log("valid number", number);
+        } else {
+            console.log("invalid number", userInput);
+        }*/
+
+        //Write a JavaScript program to strip leading and trailing spaces from a string.
+        let str2 = '  meraj  ';
+        console.log(str2);
+        console.log(str2.trim());
+
+        console.log(str2.includes('m')); //true
+        console.log(str2.includes('z')); //false
+
+
+        // Write a JavaScript program to check if an element exists in an array or not
+        let arr = ['hello', 1, 'meraj', 4, 3, 'a'];
+        let item = 'meraj';
+        console.log(arr);
+        if (arr.indexOf(item) != -1) {
+            console.log("element exists...");
+        } else {
+            console.log("element not exists...");
+        }
+    </script>
+</body>
+
+</html>
