@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function greet() {
+            console.log('good morning');
+        }
+        //call
+        greet(); //good morning
+        greet(); //good morning
+
+        function print1to5() {
+            for (let i = 1; i <= 5; i++) {
+                console.log(i);
+            }
+        }
+        //call
+        print1to5();
+
+        function isAdult() {
+            let age = 18;
+            if (age >= 18) {
+                console.log('is adult');
+            } else {
+                console.log('not adult');
+            }
+        }
+        isAdult();
+
+        //create a function to roll a dice and always display of the value of dice(1 to 6)
+        function rollToDice() {
+            let dice = Math.floor(Math.random() * 6) + 1;
+            console.log(dice);
+        }
+        rollToDice();
+        rollToDice();
+
+        //function with arguments
+        function add(a, b) {
+            let sum = a + b;
+            console.log("sum is", sum);
+
+        }
+        add(10, 5);
+
+
+        function publicInfo(name, age, gender) {
+            console.log(`name=${name}, age =${age}, gender =${gender}`);
+        }
+        publicInfo("meraj", 23, "male");
+        publicInfo("sakib", 17, "male");
+        publicInfo("sarik", 16, "male");
+
+        //multiplication table
+        function table() {
+            for (let i = 1; i <= 10; i++) {
+                console.log(`${2*i}`);
+            }
+        }
+        table();
+
+        //return function
+        function returnFun(a, b) {
+            console.log(a + b); //3 here simply add and print output
+
+            return a + b; //here add and print and also return to calling function. 
+            //so calling function store in other variable(sum) and use it in other program
+        }
+        let sum = returnFun(1, 2);
+        console.log(sum + 2); //5 here we use it
+
+        //create a function to return the sum of numbers(1 to n)
+        function returnSum() {
+            let sum = 0;
+            for (let i = 1; i <= 10; i++) {
+                sum = sum + i;
+            }
+            return sum;
+        }
+        let sum1 = returnSum();
+        console.log(sum1);
+
+        //create a function that returns the concatenation of all strings in an array
+        let str = ['hi', 'hello', 'bye', '!'];
+        let result = "";
+
+        function concatFun(str) {
+            for (let i = 0; i < str.length; i++) {
+                result = result + str[i];
+            }
+            return result;
+        }
+        let concatString = concatFun(str);
+        console.log(concatString);
+    </script>
+</body>
+
+</html>

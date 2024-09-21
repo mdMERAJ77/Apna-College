@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let sum1 = 20;
+
+        function add(a, b) {
+            let sum = a + b;
+            console.log(sum);
+            console.log(sum1)
+            return sum;
+        }
+        let output = add(1, 2);
+        console.log(output);
+        console.log(sum1); //global variable
+        //console.log(sum); //Error because sum is local variable(block scoped)
+
+        //block variable
+        let age = 18;
+        if (age >= 18) {
+            console.log("adult");
+            let age = 15;
+            console.log(`age: ${age}`);
+        }
+
+        //lexical scope
+        // Outer function
+        function outerfun() {
+            let x = 5; // Variables in the outer function
+            let y = 6;
+
+            // Inner function
+            function innerfun() {
+                let z = 10; // Variable local to inner function
+                console.log(x); // Inner function can access 'x' from outer scope
+                console.log(y); // Inner function can access 'y' from outer scope
+            }
+            //console.log(z);//Error local variable fo inner function
+            innerfun(); // Call inner function inside outer function
+        }
+
+        // Call the outer function
+        outerfun();
+
+        //function expression or anonymous function(a funtion without a name)
+        let sum = function(a, b) {
+            return a + b;
+        }
+        let out = sum(2, 2);
+        console.log(out); //4
+        console.log(sum(-8, 2)); // Outputs: -6
+
+        let greet = function() {
+            console.log("good morning...");
+        }
+        greet();
+    </script>
+</body>
+
+</html>
