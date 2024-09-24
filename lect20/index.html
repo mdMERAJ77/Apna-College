@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //try&catch
+        /*
+        let a = 10;
+        try {
+            console.log(a);
+        } catch (e) {
+            console.log(e);
+        }*/
+        //arrow function
+        let sum = (b, c) => {
+            return b + c;
+        }
+        console.log(sum(2, 2));
+
+        let cube = (x, y, z) => {
+            return x + y + z;
+        }
+        console.log(cube(4, 5, 1));
+
+        let mul = (x1, y1) => x1 * y1; //single line
+
+        //setTimeOUT
+        console.log("hi there");
+        setTimeout(() => {
+            console.log("apna college")
+        }, 4000)
+        console.log("welcome to");
+
+        //setInterval
+        let id = setInterval(() => {
+            console.log("smile please...")
+        }, 2000);
+        console.log(id);
+        clearInterval(id);
+
+
+
+
+        const student = {
+            name: "meraj",
+            age: 22,
+            eng: 20,
+            hindi: 30,
+            math: 50,
+            getAvg() {
+                let avg = Math.floor((this.eng + this.hindi + this.math) / 3);
+                console.log(`your average is ${avg}`);
+            }
+        };
+    </script>
+</body>
+
+</html>

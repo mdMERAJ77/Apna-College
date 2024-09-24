@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function multipleGreet(greet, size) {
+            for (let i = 1; i <= size; i++) {
+                greet();
+            }
+        }
+
+        function greet() {
+            console.log("hello");
+        }
+        let size = 7;
+        multipleGreet(greet, size);
+
+
+        //returns 
+        let fun = function oddEvenFactory(request) {
+            if (request == "odd" || request == "Odd") {
+                return function(n) {
+                    console.log(n % 2 != 0); // Check for odd numbers
+                }
+            } else if (request == "even" || request == "Even") {
+                return function(n) {
+                    console.log(n % 2 == 0); // Check for even numbers
+                }
+            } else {
+                console.log("wrong try again...")
+            }
+        }
+
+        let request = "even";
+        let checkOddEven = fun(request); // Get the function based on request
+        checkOddEven(3); // Pass a number to the returned function
+    </script>
+</body>
+
+</html>
