@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const user = {
+            username: "meraj",
+            age: 23,
+
+            welcomeMsg: function() {
+                console.log(this.username);
+                // console.log(this);
+            }
+        };
+        user.welcomeMsg();
+        /*
+        user.username = "sam";
+        user.welcomeMsg();
+        console.log(this);*/
+
+        /*function chai() {
+            let username = "meraj";
+            console.log(this.username)
+        }
+        chai();*/
+        //const addTwo = (a, b) => (a + b);
+        const addTwo = () => {
+            username: "meraj";
+        };
+        console.log(addTwo(3, 2));
+    </script>
+</body>
+
+</html>

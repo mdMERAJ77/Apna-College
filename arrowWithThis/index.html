@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow</title>
+</head>
+
+<body>
+    <script>
+        // Object stuInfo representing a student's information
+        const stuInfo = {
+            name: "meraj", // name property
+            age: 20, // age property
+
+            // getName is a regular function that logs and returns the student's name
+            getName: function() {
+                console.log(this); // 'this' refers to the stuInfo object
+                return this.name; // returns 'name' from stuInfo
+            },
+
+            // getAge is an arrow function that tries to log and return the student's age
+            // But 'this' in an arrow function doesn't refer to the stuInfo object.
+            // Instead, it refers to the global object (window in browsers).
+            getAge: () => {
+                console.log(this); // 'this' refers to the window object here
+                return this.age; // undefined because 'age' is not in the window object
+            },
+
+            // getInfo1 uses an arrow function inside setTimeout, which keeps 'this'
+            // bound to the stuInfo object.
+            getInfo1: function() {
+                setTimeout(() => {
+                    console.log(this); // 'this' refers to stuInfo object
+                    // Arrow function in setTimeout refers to the parent function, which is bound to stuInfo
+                }, 2000);
+            },
+
+            // getInfo2 uses a regular function inside setTimeout, where 'this' refers
+            // to the global object (window) because setTimeout has its own context.
+            getInfo2: function() {
+                setTimeout(function() {
+                    console.log(this); // 'this' refers to the window object
+                }, 2000);
+            },
+        };
+    </script>
+</body>
+
+</html>

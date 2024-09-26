@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //arrow functions
+        const add = (a, b) => {
+            console.log(a + b);
+        }
+        const cube = n => {
+            console.log(n * n * n);
+        }
+
+        //implicit returns
+        const mul = (a, b) => (a + b);
+
+
+        //setTimeout(function,time)
+        console.log("hi there");
+        setTimeout(() => {
+            console.log("hi");
+        }, 4000);
+
+        //setInterval(function,time)
+        console.log("hello");
+        let id1 = setInterval(() => {
+            console.log("id1 setInterval");
+        }, 4000)
+        clearInterval(id1);
+        let id2 = setInterval(() => {
+            console.log("id2 setInterval")
+        }, 5000)
+        clearInterval(id2)
+    </script>
+</body>
+
+</html>

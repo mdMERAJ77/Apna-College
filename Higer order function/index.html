@@ -9,37 +9,55 @@
 
 <body>
     <script>
-        function multipleGreet(greet, size) {
-            for (let i = 1; i <= size; i++) {
-                greet();
-            }
+        function higher(b) {
+            console.log(typeof(b));
+            console.log(b)
         }
+        higher({
+            name: "meraj",
+            age: 20,
+        });
+        higher("today we will higher order function...");
 
-        function greet() {
-            console.log("hello");
-        }
-        let size = 7;
-        multipleGreet(greet, size);
+        higher([1, 2, 3, 4]);
 
 
-        //returns 
-        let fun = function oddEvenFactory(request) {
-            if (request == "odd" || request == "Odd") {
-                return function(n) {
-                    console.log(n % 2 != 0); // Check for odd numbers
+
+
+
+
+        /*
+                function multipleGreet(greet, size) {
+                    for (let i = 1; i <= size; i++) {
+                        greet();
+                    }
                 }
-            } else if (request == "even" || request == "Even") {
-                return function(n) {
-                    console.log(n % 2 == 0); // Check for even numbers
-                }
-            } else {
-                console.log("wrong try again...")
-            }
-        }
 
-        let request = "even";
-        let checkOddEven = fun(request); // Get the function based on request
-        checkOddEven(3); // Pass a number to the returned function
+                function greet() {
+                    console.log("hello");
+                }
+                let size = 7;
+                multipleGreet(greet, size);
+
+
+                //returns 
+                let fun = function oddEvenFactory(request) {
+                    if (request == "odd" || request == "Odd") {
+                        return function(n) {
+                            console.log(n % 2 != 0); // Check for odd numbers
+                        }
+                    } else if (request == "even" || request == "Even") {
+                        return function(n) {
+                            console.log(n % 2 == 0); // Check for even numbers
+                        }
+                    } else {
+                        console.log("wrong try again...")
+                    }
+                }
+
+                let request = "even";
+                let checkOddEven = fun(request); // Get the function based on request
+                checkOddEven(3);*/ // Pass a number to the returned function
     </script>
 </body>
 
