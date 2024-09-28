@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function sum(...args) {
+            //arguments
+            for (let i = 0; i < args.length; i++) {
+                console.log(`you gave us ${args[i]}`);
+            }
+        }
+        sum(1, 2, 3, 4);
+
+        function min() {
+            console.log(arguments);
+            // console.log(arguments.length);
+            //console.log(arguments.push(1));//error
+        }
+        min();
+
+        function add(...args) {
+            return args.reduce((sum1, el) => sum1 + el);
+        }
+        let out = add(1, 2, 3, 4, 5);
+        console.log(out);
+
+        function max(msg, ...args) {
+            console.log(msg);
+            return args.reduce((max, el1) => {
+                if (max > el1) {
+                    return max;
+                } else {
+                    return el1;
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
