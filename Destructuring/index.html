@@ -8,7 +8,38 @@
 </head>
 
 <body>
+    <!--Destructuring-->
+    <script>
+        /*Destructuring in array*/
+        let names = ["meraj", "sakib", "sarik", "hamza"];
+        /*let [winner, runnerup] = names;*/
+        /*let [, , winner] = names;*/ //,, means skip the index
+        let {
+            3: winner,
+            0: runnerup
+        } = names;
 
+
+        /*Destructuring in object*/
+        let user = {
+            name: "meraj",
+            age: 20,
+            address: {
+                city: "Bihar",
+                state: "Darbhanga",
+            },
+        };
+        let {
+            name,
+            age,
+            address: {
+                cit, //undefined object name must be same
+                city,
+                state,
+                village, //undefined
+            }
+        } = user;
+    </script>
 </body>
 
 </html>
