@@ -41,4 +41,5 @@
 
 let promise =new Promise((resolve,reject)=>{
     console.log("i am promise");
-})
+    reject("some error occurred");
+});
